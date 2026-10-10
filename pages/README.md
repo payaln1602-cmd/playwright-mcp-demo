@@ -1,10 +1,38 @@
-Built a Playwright and TypeScript end-to-end suite (12 test runs across Chromium, Firefox and WebKit) using the Page Object Model, executed automatically in GitHub Actions CI.
-Used Playwright MCP with GitHub Copilot to explore web flows and draft tests, then reviewed and refactored them for reliability.
+# Playwright MCP Demo
 
-I recently built a small test automation project using Playwright and Playwright MCP.
+![Playwright Tests](https://github.com/payaln1602-cmd/playwright-mcp-demo/actions/workflows/playwright.yml/badge.svg)
 
-I used an AI agent in VS Code to explore a web app and draft tests, then reviewed and refactored them myself into a TypeScript suite with the Page Object Model. It runs on three browsers and passes in GitHub Actions CI.
+End-to-end tests for [SauceDemo](https://www.saucedemo.com) built with Playwright and TypeScript. I used Playwright MCP with GitHub Copilot to explore the app and draft the tests, then reviewed and refactored them by hand.
 
-My biggest takeaway: AI is great at speeding up first drafts, but reviewing the output is where the real testing skill shows.
+## What's covered
+- Successful login
+- Locked-out user sees an error
+- Add two products to the cart
+- Complete checkout
 
-Repo and demo video: [link]
+Tests run on Chromium, Firefox and WebKit (12 test runs) and execute automatically in GitHub Actions on every push.
+
+## Tech stack
+Playwright · TypeScript · Page Object Model · Playwright MCP · GitHub Copilot · GitHub Actions
+
+## Test report
+![Test report](Report.png)
+
+## How I used Playwright MCP
+1. Asked the agent to open SauceDemo and describe the login form and checkout flow.
+2. Had it draft tests based on what it explored.
+3. Reviewed the output and made it reliable by hand. Write 1 or 2 real changes you made here, for example: "moved selectors into page objects" or "replaced weak assertions with specific checks".
+
+## Run it locally
+```bash
+npm install
+npx playwright install
+npx playwright test
+npx playwright show-report
+```
+
+## MCP setup
+`.vscode/mcp.json` configures the Playwright MCP server for VS Code.
+
+## What I'd improve next
+Add one or two real ideas here, for example: API tests, data-driven tests, or visual comparisons.
