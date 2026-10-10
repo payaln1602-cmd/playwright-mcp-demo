@@ -16,7 +16,7 @@ Tests run on Chromium, Firefox and WebKit (12 test runs) and execute automatical
 Playwright · TypeScript · Page Object Model · Playwright MCP · GitHub Copilot · GitHub Actions
 
 ## Test report
-![Test report](Report.png)
+![Test report](docs/Report.png)
 
 ## How I used Playwright MCP
 1. Asked the agent to open SauceDemo and describe the login form and checkout flow.
